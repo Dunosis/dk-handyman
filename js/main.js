@@ -41,7 +41,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    window.addEventListener('scroll', highlightNavOnScroll);
-
-    console.log('DK Handyman website loaded successfully!');
+    // Throttle scroll event for better performance
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                highlightNavOnScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
 });
