@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Drywall Project",
+    "description": "We are a proud family-owned and locally operated business dedicated to serving homeowners in the Copperas Cove, TX area. Our vision is to be the community's trusted, go-to handyman and painting contractor.",
+    "images": [
+      "images/service-drywall.png",
+      "images/about-us.png",
+      "images/service-painting.png",
+      "images/service-flooring.png"
+    ]
+  },
+  {
+    "name": "General Repairs",
+    "description": "We offer exceptional workmanship, reliability, and an unwavering commitment to making your house better. Whether you need a simple fix like a leaky faucet, a fresh coat of paint, or complex drywall repairs, we're here to help you create a space you're proud to call home—without stretching your budget.",
+    "images": [
+      "images/service-general-repairs.png",
+      "images/service-drywall.png",
+      "images/about-us.png"
+    ]
+  },
+  {
+    "name": "Painting Services",
+    "description": "When you need a reliable helping hand, rely on us to transform your house into the home you've always wanted. Our professional painting services bring new life to your space with quality finishes and attention to detail.",
+    "images": [
+      "images/service-painting.png",
+      "images/service-flooring.png",
+      "images/service-fences.png",
+      "images/about-us.png"
+    ]
+  }
+]
+
+
