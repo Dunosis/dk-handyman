@@ -231,9 +231,9 @@ body {
 /* Services Section */
 .services {
     position: relative;
-    padding: 33px 60px;
+    padding: 10px 10px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 ;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -254,7 +254,7 @@ body {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE and Edge */
-    padding: 10px 20px;
+    padding: 10px 0px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -963,7 +963,7 @@ body {
     
     .services {
         width: 100%;
-        padding: 33px 40px;
+        padding: 10px 40px;
     }
     
     .carousel-slide {
@@ -1120,27 +1120,7 @@ body {
     .contact-value {
         font-size: 18px;
     }
-    
-    .services {
-        padding: 20px 10px;
-        gap: 10px;
-    }
-    
-    .service-arrow {
-        padding: 5px;
-    }
-    
-    .service-arrow svg {
-        width: 20px;
-        height: 22px;
-    }
-    
-    .service-image-container,
-    .service-title-bg {
-        width: 100%;
-        max-width: 400px;
-    }
-    
+
     .about-us {
         height: auto;
         min-height: 600px;
@@ -1245,7 +1225,7 @@ body {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
 
     .carousel-slide {
         width: 100vw;
@@ -1406,4 +1386,68 @@ body {
         font-size: 12px;
         margin-bottom: 3px;
     }
+
+    /* Services Section */
+    
+    .services {
+        padding: 0px 0px;
+        gap: 10px;
+    }
+
+    .services-wrapper {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .services-container {
+        display: flex;
+        gap: 0;                     /* sin espacio entre tarjetas */
+        padding: 0;                 /* elimina padding lateral */
+        scroll-snap-type: x mandatory;
+    }
+
+    .service-card {
+        min-width: 100%;            /* clave: ocupa toda la pantalla */
+        max-width: 100%;
+        scroll-snap-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .service-image-container {
+        width: 100%;                /* tarjeta 100% del ancho */
+        height: 220px;
+        max-width: 100%;
+        border-radius: 0;           /* opcional */
+    }
+
+    .service-title-bg {
+        width: 100%;
+        height: 60px;
+        border-radius: 0;
+    }
+
+    .service-title {
+        font-size: 24px;
+    }
+    
+
 }
+/* Pantallas medianas: 2 tarjetas */
+@media (min-width: 641px) and (max-width: 1024px) {
+
+    .service-image-container {
+        width: 320px;
+        height: 240px;
+    }
+
+    .service-title-bg {
+        width: 320px;
+        height: 60px;
+    }
+
+    .service-title {
+        font-size: 28px;
+    }
+}
+
