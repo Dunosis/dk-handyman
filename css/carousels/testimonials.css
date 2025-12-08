@@ -1,0 +1,186 @@
+/* =========================================================
+   TESTIMONIALS SECTION
+   ========================================================= */
+
+   .testimonials {
+    width: 100%;
+    background-color: var(--red-primary);
+    padding: 38px 23px;
+    position: relative;
+}
+
+/* Wrapper para controlar el layout principal */
+.testimonials-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 40px;
+    width: 100%;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.testimonials-title {
+    font-family: 'Impact', sans-serif;
+    font-size: 96px;
+    color: var(--white);
+    text-transform: uppercase;
+    line-height: 0.9;
+    z-index: 10;
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TESTIMONIAL CONTAINER (flechas a los extremos)
+   ========================================================= */
+
+.testimonials-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* ← IMPORTANTE */
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Caja de texto (fondo blanco ORIGINAL MANTENIDO) */
+.testimonial-box {
+    background-color: #fcfbfb;
+    border-radius: 10px;
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+    height: auto;
+}
+
+.testimonial-slide {
+    display: none;
+}
+
+.testimonial-slide.active {
+    display: block;
+}
+
+/* =========================================================
+   FLECHAS — SIEMPRE REDONDAS A LOS EXTREMOS
+   ========================================================= */
+
+.testimonial-arrow {
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+}
+
+.testimonial-arrow:hover {
+    transform: scale(1.07);
+}
+
+.testimonial-arrow svg {
+    width: 32px;
+    height: 32px;
+}
+
+.testimonial-arrow svg path {
+    stroke: var(--red-primary) !important;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.testimonial-text {
+    font-family: 'Archivo', sans-serif;
+    font-size: 24px;
+    line-height: 1.4;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.testimonial-author {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 20px;
+    color: var(--black);
+    text-align: center;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+/* ---------- PANTALLAS GRANDES (FINAL) ---------- */
+@media (min-width: 1200px) {
+    .testimonials-wrapper {
+        flex-direction: row;
+    }
+
+    .testimonials-container {
+        flex-direction: row;
+        justify-content: space-between; /* flechas a los lados */
+    }
+}
+
+/* ---------- TABLET Y MÓVIL (apilar, flechas abajo) ---------- */
+@media (max-width: 1199px) {
+
+    .testimonials-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .testimonials-title {
+        font-size: 64px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    /* APILA TODO EL CONTENIDO, Y LAS FLECHAS ABAJO */
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+        max-width: 600px;
+    }
+
+    /* flechas debajo y centradas */
+    .testimonial-arrows-group {
+        display: flex;
+        gap: 20px;
+        margin-top: 15px;
+    }
+}
+
+/* ---------- MÓVILES PEQUEÑOS ---------- */
+@media (max-width: 640px) {
+    .testimonials-title {
+        font-size: 36px;
+    }
+
+    .testimonial-arrow {
+        width: 50px;
+        height: 50px;
+    }
+
+    .testimonial-arrow svg {
+        width: 26px;
+        height: 26px;
+    }
+}
