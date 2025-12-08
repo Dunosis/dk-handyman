@@ -6,6 +6,7 @@
     <meta name="description" content="DK Handyman - Contact us for your home repair needs">
     <title>DK Handyman - Contact</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Archivo+Narrow:wght@400;500;700&family=Archivo+Black&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -29,46 +30,32 @@
     </header>
 
     <!-- Contact Section -->
-    <section class="contact-page">
-        <div class="contact-header">
-            <h1 class="contact-title">CONTACT US</h1>
-            <p class="contact-subtitle">Get in touch for your home repair needs</p>
-        </div>
-
-        <div class="contact-content">
-            <div class="contact-info-section">
-                <h2 class="contact-section-title">GET IN TOUCH</h2>
-                <div class="contact-info">
-                    <div class="contact-info-item">
-                        <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="#f71717" stroke="#f71717" stroke-width="0.5"/>
-                        </svg>
-                        <div>
-                            <p class="contact-label">Phone</p>
-                            <p class="contact-value">(254) 312-0825</p>
-                        </div>
-                    </div>
-                    <div class="contact-info-item">
-                        <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="#f71717"/>
-                        </svg>
-                        <div>
-                            <p class="contact-label">Facebook</p>
-                            <p class="contact-value">DK Handyman</p>
-                        </div>
-                    </div>
-                    <div class="contact-info-item">
-                        <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#f71717"/>
-                        </svg>
-                        <div>
-                            <p class="contact-label">Location</p>
-                            <p class="contact-value">Copperas Cove, TX</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="contact-section">
+        <h2 class="contact-title">CONTACT US</h2>
+    
+        <form class="contact-form" action="send_mail.php" method="POST">
+            <label>
+                Name
+                <input type="text" name="name" required placeholder="Value">
+            </label>
+        
+            <label>
+                Surname
+                <input type="text" name="surname" required placeholder="Value">
+            </label>
+        
+            <label>
+                Email
+                <input type="email" name="email" required placeholder="Value">
+            </label>
+        
+            <label>
+                Message
+                <textarea name="message" required placeholder="Value"></textarea>
+            </label>
+        
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
     </section>
 
     <!-- Footer -->
