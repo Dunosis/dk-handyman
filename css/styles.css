@@ -55,6 +55,14 @@ h1,h2,h3,h4,p {
     bottom: 15.67%;
     left: 0;
     right: 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.header-background.fixed {
+    top: 0%;
+    left: 0;
+    right: 0;
+    height: 175px;
 }
 
 .header-content {
@@ -98,6 +106,15 @@ h1,h2,h3,h4,p {
     display: flex;
     gap: 35px;
     align-items: center;
+}
+
+.header-nav.fixed {
+    position: fixed;
+    display: flex;
+    top: 60px;
+    right: 60px;
+    gap: 35px;
+
 }
 
 .nav-btn {
@@ -498,6 +515,24 @@ h1,h2,h3,h4,p {
         min-height: 200px;
     }
 
+
+    .header-background {
+        position: absolute;
+        background-color: var(--red-primary);
+        top: 25%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    
+    .header-background.fixed {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 300px;
+    }
+
     .header-content {
         flex-direction: column;
         padding: 20px;
@@ -505,19 +540,28 @@ h1,h2,h3,h4,p {
     }
 
     .logo-border {
-        padding: 60px 40px;
+        padding: 40px 40px;
         border-radius: 150px;
     }
 
     .logo-image {
-        width: 150px;
-        height: 112px;
+        width: 100px;
+        height: 100px;
     }
 
     .header-nav {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
+    }
+
+    .header-nav.fixed {
+        position: absolute;
+        display: flex;
+        top: 225px;
+        gap: 30px;
+        right: inherit;
+        z-index: 2000;
     }
 
     .nav-btn {
@@ -637,7 +681,7 @@ h1,h2,h3,h4,p {
         left: 0;
         right: 0;
         z-index: 1000;
-        height: 100px;
+        height: 50px;
         width: 100%;
         transition: all 0.3s ease;
     }
@@ -653,18 +697,25 @@ h1,h2,h3,h4,p {
     .header-background {
         position: absolute;
         background-color: var(--red-primary);
-        top: 25%;
+        top: 20%;
         bottom: 0;
         left: 0;
         right: 0;
+    }
+    
+    .header-background.fixed {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 170px;
     }
 
     .header-content {
         position: relative;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        height: 100%;
+        height: 80%;
         max-width: 1728px;
         margin: 0 auto;
         padding: 0 0%;
@@ -688,8 +739,8 @@ h1,h2,h3,h4,p {
     }
 
     .logo-image {
-        width: 80px;
-        height: 80px;
+        width: 50px;
+        height: 50px;
         object-fit: cover;
         object-position: 50% 50%;
         pointer-events: none;
@@ -698,10 +749,19 @@ h1,h2,h3,h4,p {
 
     .header-nav {
         display: flex;
-        gap: 35px;
+        gap: 20px;
         align-items: center;
         z-index: 2000;
         margin-bottom: 20px;
+    }
+    
+    .header-nav.fixed {
+        position: absolute;
+        display: flex;
+        top: 115px;
+        gap: 20px;
+        right: inherit;
+        z-index: 2000;
     }
 
     .nav-btn {

@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Header scroll behavior
     function initHeaderScroll() {
         const header = document.getElementById('header');
+        const header_background = document.getElementById('header-background');
+        const header_nav = document.getElementById('header-nav');
         const heroCarousel = document.getElementById('home');
         
         if (!header || !heroCarousel) return;
@@ -15,8 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Cuando el scroll pasa el hero-carousel, fijar el header en la parte superior
             if (scrollPosition >= heroBottom - header.offsetHeight) {
                 header.classList.add('fixed');
+                header_background.classList.add('fixed');
+                header_nav.classList.add('fixed');
             } else {
                 header.classList.remove('fixed');
+                header_background.classList.remove('fixed');
+                header_nav.classList.remove('fixed');
             }
         }
         
