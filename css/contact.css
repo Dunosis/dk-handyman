@@ -6,6 +6,7 @@
     font-weight: 800;
     margin: 20px 0 0px;
     padding-top: 200px;
+    margin-top: 50px;
 }
 
 /* FORM CONTAINER */
@@ -71,9 +72,17 @@
     opacity: 0.9;
 }
 
-/* RESPONSIVE */
-@media (max-width: 480px) {
+
+@media (max-width: 968px) {
     .contact-title {
+        margin-top: 150px;
+        font-size: 50px;
+    }
+}
+/* RESPONSIVE */
+@media (max-width: 640px) {
+    .contact-title {
+        margin-top: 10px;
         font-size: 36px;
     }
 
