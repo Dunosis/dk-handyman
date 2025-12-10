@@ -303,7 +303,7 @@ h1,h2,h3,h4,p {
 
 .about-text {
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 26px;
     line-height: normal;
     color: var(--text-light);
