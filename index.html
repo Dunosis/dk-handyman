@@ -176,25 +176,30 @@
     <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="testimonials-wrapper">
-
+    
             <h2 class="testimonials-title">HEAR FROM<br>OUR CLIENTS</h2>
+    
             <div class="testimonials-container">
-                <button class="testimonial-arrow testimonial-arrow-left" id="testimonialPrev">
+    
+                <!-- Flecha izquierda (solo desktop) -->
+                <button class="testimonial-arrow testimonial-arrow-left desktop-arrow" id="testimonialPrev">
                     <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15 18L9 13L15 8" stroke="#09090B" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round" />
                     </svg>
                 </button>
+    
                 <div class="testimonial-box">
                     <div class="testimonial-slide active">
-                        <p class="testimonial-text">"To have work done by a person that cares so much about the quality
+                        <p class="testimonial-text">To have work done by a person that cares so much about the quality
                             of their work is great but DK Handyman also cares about us. He did a wonderful job on the
                             hallway and office. He got the job done ahead of time and it looks amazing. To have someone
                             come in and care as much about our home as we do is amazing. He is polite, respectful and a
                             true believer a great person you can rely on. Thank you so much. Already planning the next
-                            project."</p>
+                            project.</p>
                         <p class="testimonial-author">PTL</p>
                     </div>
+    
                     <div class="testimonial-slide">
                         <p class="testimonial-text">We had a pipe leak above our ceiling and needed to have the drywall
                             repaired and ceiling painted. Dave came over the same day to give a quote, which was the
@@ -204,14 +209,34 @@
                         <p class="testimonial-author">Jaime R</p>
                     </div>
                 </div>
-                <button class="testimonial-arrow testimonial-arrow-right" id="testimonialNext">
+    
+                <!-- arrow left (only desktop) -->
+                <button class="testimonial-arrow testimonial-arrow-right desktop-arrow" id="testimonialNext">
+                    <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 13L9 8" stroke="#09090B" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+    
+            </div>
+    
+            <!-- Moving arrows below the testimonial-->
+            <div class="testimonial-arrows-group mobile-arrows">
+                <button class="testimonial-arrow" id="testimonialPrevMobile">
+                    <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 13L15 8" stroke="#09090B" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+    
+                <button class="testimonial-arrow" id="testimonialNextMobile">
                     <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 18L15 13L9 8" stroke="#09090B" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round" />
                     </svg>
                 </button>
             </div>
-
+    
         </div>
     </section>
 

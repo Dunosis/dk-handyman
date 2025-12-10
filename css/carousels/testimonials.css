@@ -2,14 +2,13 @@
    TESTIMONIALS SECTION
    ========================================================= */
 
-   .testimonials {
+.testimonials {
     width: 100%;
     background-color: var(--red-primary);
     padding: 38px 23px;
     position: relative;
 }
 
-/* Wrapper para controlar el layout principal */
 .testimonials-wrapper {
     display: flex;
     justify-content: space-between;
@@ -19,11 +18,6 @@
     gap: 40px;
     width: 100%;
 }
-
-
-/* =========================================================
-   TITLE
-   ========================================================= */
 
 .testimonials-title {
     font-family: 'Impact', sans-serif;
@@ -35,21 +29,15 @@
     flex-shrink: 0;
 }
 
-
-/* =========================================================
-   TESTIMONIAL CONTAINER (flechas a los extremos)
-   ========================================================= */
-
 .testimonials-container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* ← IMPORTANTE */
+    justify-content: space-between;
     gap: 20px;
     width: 100%;
     max-width: 900px;
 }
 
-/* Caja de texto (fondo blanco ORIGINAL MANTENIDO) */
 .testimonial-box {
     background-color: #fcfbfb;
     border-radius: 10px;
@@ -67,10 +55,6 @@
     display: block;
 }
 
-/* =========================================================
-   FLECHAS — SIEMPRE REDONDAS A LOS EXTREMOS
-   ========================================================= */
-
 .testimonial-arrow {
     width: 60px;
     height: 60px;
@@ -82,7 +66,7 @@
     justify-content: center;
     flex-shrink: 0;
     cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     transition: transform 0.2s ease;
 }
 
@@ -98,11 +82,6 @@
 .testimonial-arrow svg path {
     stroke: var(--red-primary) !important;
 }
-
-
-/* =========================================================
-   TEXT
-   ========================================================= */
 
 .testimonial-text {
     font-family: 'Archivo', sans-serif;
@@ -120,24 +99,6 @@
     text-align: center;
 }
 
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-/* ---------- PANTALLAS GRANDES (FINAL) ---------- */
-@media (min-width: 1200px) {
-    .testimonials-wrapper {
-        flex-direction: row;
-    }
-
-    .testimonials-container {
-        flex-direction: row;
-        justify-content: space-between; /* flechas a los lados */
-    }
-}
-
-/* ---------- TABLET Y MÓVIL (apilar, flechas abajo) ---------- */
 @media (max-width: 1199px) {
 
     .testimonials-wrapper {
@@ -153,14 +114,11 @@
         text-align: center;
     }
 
-    /* APILA TODO EL CONTENIDO, Y LAS FLECHAS ABAJO */
     .testimonials-container {
-        flex-direction: column;
         align-items: center;
-        max-width: 600px;
+        max-width: 800px;
     }
 
-    /* flechas debajo y centradas */
     .testimonial-arrows-group {
         display: flex;
         gap: 20px;
@@ -168,19 +126,49 @@
     }
 }
 
-/* ---------- MÓVILES PEQUEÑOS ---------- */
 @media (max-width: 640px) {
     .testimonials-title {
         font-size: 75px;
     }
 
+    .testimonials-container {
+        align-items: center;
+        max-width: 800px;
+        gap: 10px
+    }
+
     .testimonial-arrow {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
     }
 
     .testimonial-arrow svg {
         width: 26px;
         height: 26px;
+    }
+}
+
+.mobile-arrows {
+    display: none;
+    justify-content: center;
+    gap: 20px;
+}
+
+.desktop-arrow {
+    display: flex;
+}
+
+@media (max-width: 640px) {
+    .desktop-arrow {
+        display: none; 
+    }
+
+    .mobile-arrows {
+        display: flex;
+    }
+
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
     }
 }
