@@ -87,6 +87,12 @@
 
 .portfolio-item {
     margin-bottom: 174px;
+    border-radius: 25px; 
+    overflow: hidden;
+}
+
+.portfolio-item:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .portfolio-item:last-child {
