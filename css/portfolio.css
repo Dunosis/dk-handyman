@@ -1,3 +1,5 @@
+
+
 /* Portfolio Image Carousel */
 .portfolio-image-carousel {
     position: relative;
@@ -10,22 +12,21 @@
     display: flex;
     width: 100%;
     height: 100%;
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
 }
 
 .portfolio-image-slide {
     min-width: 100%;
     height: 100%;
-    position: relative;
-    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
 }
 
 .portfolio-image-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
-    pointer-events: none;
+    display: block;
 }
 
 .portfolio-carousel-arrow {

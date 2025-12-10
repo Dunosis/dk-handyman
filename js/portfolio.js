@@ -70,6 +70,11 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (!track || slides.length === 0) return;
             
+            if (slides.length <= 1) {
+                if (prevBtn) prevBtn.style.display = "none";
+                if (nextBtn) nextBtn.style.display = "none";
+            }
+            
             let currentSlide = 0;
             let autoScrollInterval;
             let isPaused = false;
