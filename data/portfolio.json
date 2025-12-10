@@ -1,0 +1,135 @@
+[
+  {
+    "name": "DOOR INSTALLATION",
+    "description": "Installed door with all hardware in under two hours.",
+    "images": [
+      "images/portfolio/01/dk-01.png"
+    ]
+  },
+  {
+    "name": "GARAGE DOOR PAINTING",
+    "description": "Completed the full painting of the garage door in a single day.",
+    "images": [
+      "images/portfolio/02/dk-01.png"
+    ]
+  },
+  {
+    "name": "DECK AND ROOF",
+    "description": "Built the deck and roof.",
+    "images": [
+      "images/portfolio/03/dk-01.jpg",
+      "images/portfolio/03/dk-02.jpg",
+      "images/portfolio/03/dk-03.jpg"
+    ]
+  },
+  {
+    "name": "DECK CONSTRUCTION",
+    "description": "Complete rebuild of patio deck.",
+    "images": [
+      "images/portfolio/04/dk-01.jpg",
+      "images/portfolio/04/dk-02.jpg"
+    ]
+  },
+  { 
+    "name": "HOUSE PAINTING",
+    "description": "Work on sanding, repairs, primer, and two coats of Sherwin Super Paint.",
+    "images": [
+      "images/portfolio/05/dk-01.jpg",
+      "images/portfolio/05/dk-02.jpg",
+      "images/portfolio/05/dk-03.jpg",
+      "images/portfolio/05/dk-04.jpg",
+      "images/portfolio/05/dk-05.jpg",
+      "images/portfolio/05/dk-06.jpg"
+    ]
+  },
+{
+    "name": "KITCHEN CABINET INSTALLATION",
+    "description": "Installed new kitchen cabinets with clients specific requirements.",
+    "images": [
+      "images/portfolio/06/dk-01.jpg",
+      "images/portfolio/06/dk-02.jpg",
+      "images/portfolio/06/dk-03.jpg"
+    ]
+ },
+ {
+   "name": "BATHROOM REMODELING",
+   "description": "Shower conversion from an existing bathtub completed in a few days.",
+    "images": [
+      "images/portfolio/07/dk-01.jpg"
+    ]
+ }, 
+ {
+   "name": "SCREENED-IN DECK",
+   "description": "Completed a beautiful screened-in deck upgrade, which included a new roof, ceiling, and storm doors.",
+    "images": [
+      "images/portfolio/08/dk-01.jpg",
+      "images/portfolio/08/dk-02.jpg"
+    ]
+ },
+ {
+   "name": "HOUSE REMODELING",
+   "description": "Complete house remodeling.",
+    "images": [
+      "images/portfolio/09/dk-01.jpg",
+      "images/portfolio/09/dk-02.jpg",
+      "images/portfolio/09/dk-03.jpg",
+      "images/portfolio/09/dk-04.jpg"
+    ]
+
+ },
+ {
+   "name": "BATHROOM AND KITCHEN REMODELING",
+   "description": "New paint brightens kitchen cabinets, walls and guest bathroom.",
+    "images": [
+      "images/portfolio/10/dk-01.jpg",
+      "images/portfolio/10/dk-02.jpg",
+      "images/portfolio/10/dk-03.jpg"
+    ]
+ },
+ {
+   "name": "CURVED FENCE",
+   "description": "Built a cedar privacy fence with a curved finish.",
+    "images": [
+      "images/portfolio/11/dk-01.jpg",
+      "images/portfolio/11/dk-02.jpg"
+    ]
+ },
+ {
+   "name": "WINDOW AND DOOR INSTALLATION",
+   "description": "Installed new windows and a door.",
+    "images": [
+      "images/portfolio/12/dk-01.jpg",
+      "images/portfolio/12/dk-02.jpg"
+    ]
+ },
+ {
+   "name": "BATHROOM DEMOLITION AND REMODELING",
+   "description": "Bathroom Demolition and Remodeling.",
+    "images": [
+      "images/portfolio/13/dk-01.jpg",
+      "images/portfolio/13/dk-02.jpg"
+    ]
+ },
+ {
+   "name": "APARTMENT PAINTING AND FLOORING",
+   "description": "Cleaned, painted, removed carpet and installed new flooring.",
+    "images": [
+      "images/portfolio/14/dk-01.jpg",
+      "images/portfolio/14/dk-02.jpg",
+      "images/portfolio/14/dk-03.jpg",
+      "images/portfolio/14/dk-04.jpg",
+      "images/portfolio/14/dk-05.jpg",
+      "images/portfolio/14/dk-06.jpg"
+    ]
+ },
+ {
+   "name": "DECK RESTORATION",
+   "description": "The deck structure, surface, and accompanying stairs were fully restored.",
+    "images": [
+      "images/portfolio/15/dk-01.jpg",
+      "images/portfolio/15/dk-02.jpg"
+    ]
+ }
+]
+
+
