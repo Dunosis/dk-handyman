@@ -148,7 +148,7 @@
     }
 
     .testimonials-title {
-        font-size: 64px;
+        font-size: 80px;
         margin-bottom: 10px;
         text-align: center;
     }
@@ -171,7 +171,7 @@
 /* ---------- MÓVILES PEQUEÑOS ---------- */
 @media (max-width: 640px) {
     .testimonials-title {
-        font-size: 36px;
+        font-size: 75px;
     }
 
     .testimonial-arrow {
