@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="portfolio-image-track" id="track-${index}">
                         ${item.images.map((img, imgIndex) => `
                             <div class="portfolio-image-slide ${imgIndex === 0 ? 'active' : ''}">
-                                <img src="${img}" alt="${item.name} - Image ${imgIndex + 1}">
+                                <img loading="lazy" src="${img}" alt="${item.name} - Image ${imgIndex + 1}">
                             </div>
                         `).join('')}
                     </div>
