@@ -46,6 +46,8 @@
     transform: translateY(20px);
     animation: fadeInUp 0.6s ease forwards;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 20px; 
+    overflow: hidden; 
 }
 
 .service-card:nth-child(1) { animation-delay: 0.1s; }
@@ -221,7 +223,7 @@
     
     .services {
         padding: 0px 0px;
-        gap: 10px;
+        gap: 5px;
     }
 
     .services-wrapper {
@@ -242,13 +244,14 @@
         scroll-snap-align: center;
         display: flex;
         justify-content: center;
+        border-radius: 10px; 
+        overflow: hidden; 
     }
 
     .service-image-container {
         width: 100%;                /* tarjeta 100% del ancho */
-        height: 220px;
-        max-width: 100%;
-        border-radius: 0;           /* opcional */
+        height: 320px;
+        max-width: 100%;         /* opcional */
     }
 
     .service-title-bg {
@@ -262,21 +265,4 @@
     }
     
 
-}
-/* Pantallas medianas: 2 tarjetas */
-@media (min-width: 641px) and (max-width: 1024px) {
-
-    .service-image-container {
-        width: 320px;
-        height: 240px;
-    }
-
-    .service-title-bg {
-        width: 320px;
-        height: 60px;
-    }
-
-    .service-title {
-        font-size: 28px;
-    }
 }
