@@ -146,7 +146,7 @@ h1,h2,h3,h4,p {
 .hero-carousel {
     position: relative;
     width: 100%;
-    height: 933px;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -172,7 +172,7 @@ h1,h2,h3,h4,p {
 
 .carousel-slide {
     width: 100vw;
-    height: 933px;
+    height: 100vh;
     flex-shrink: 0;
     overflow: hidden;
     scroll-snap-align: start;
