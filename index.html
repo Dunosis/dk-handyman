@@ -31,6 +31,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Archivo+Narrow:wght@400;500;700&family=Archivo+Black&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet">
+    <!-- 1) Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- 2) Font Awesome (para los íconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- 3) Swiper JS (antes de tu propio JS) -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -84,74 +92,61 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <button class="service-arrow service-arrow-left" id="servicePrev">
-            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 18L9 13L15 8" stroke="#09090B" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-            </svg>
-        </button>
-        <div class="services-wrapper">
-            <div class="services-container">
-                <a href="/portfolio.html" class="service-card">
-                    <div class="service-image-container">
-                        <div class="service-image-overlay"></div>
-                        <img loading="lazy" src="images/services/dk-service-drywall.png" alt="Drywall Service"
-                            class="service-image">
-                    </div>
-                    <div class="service-title-bg">
-                        <p class="service-title">DRYWALL</p>
-                    </div>
-                </a>
-                <a href="/portfolio.html" class="service-card">
-                    <div class="service-image-container">
-                        <div class="service-image-overlay"></div>
-                        <img loading="lazy" src="images/services/dk-service-general-repairs.png"
-                            alt="General Repairs Service" class="service-image">
-                    </div>
-                    <div class="service-title-bg">
-                        <p class="service-title">GENERAL REPAIRS</p>
-                    </div>
-                </a>
-                <a href="/portfolio.html" class="service-card">
-                    <div class="service-image-container">
-                        <div class="service-image-overlay"></div>
-                        <img loading="lazy" src="images/services/dk-service-flooring.png" alt="Flooring Service"
-                            class="service-image">
-                    </div>
-                    <div class="service-title-bg">
-                        <p class="service-title">FLOORING</p>
-                    </div>
-                </a>
-                <a href="/portfolio.html" class="service-card">
-                    <div class="service-image-container">
-                        <div class="service-image-overlay"></div>
-                        <img loading="lazy" src="images/services/dk-service-painting.png" alt="Painting Service"
-                            class="service-image">
-                    </div>
-                    <div class="service-title-bg">
-                        <p class="service-title">PAINTING</p>
-                    </div>
-                </a>
-                <a href="/portfolio.html" class="service-card">
-                    <div class="service-image-container">
-                        <div class="service-image-overlay"></div>
-                        <img loading="lazy" src="images/services/dk-service-fences.png" alt="Fences Service"
-                            class="service-image">
-                    </div>
-                    <div class="service-title-bg">
-                        <p class="service-title">FENCES</p>
-                    </div>
-                </a>
+
+    <section id="slider-cards">
+
+        <div class="container swiper">
+            <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img loading="lazy" src="images/services/dk-service-drywall.png" alt="Drywall Service"
+                                class="card-image">
+                            <h2 class="card-title">driwall</h2>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img loading="lazy" src="images/services/dk-service-general-repairs.png"
+                                alt="General Repairs Service" class="card-image">
+                            <h2 class="card-title">general repairs</h2>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img loading="lazy" src="images/services/dk-service-flooring.png" alt="Flooring Service"
+                                class="card-image">
+                            <h2 class="card-title">flooring</h2>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img loading="lazy" src="images/services/dk-service-painting.png" alt="Painting Service"
+                                class="card-image">
+                            <h2 class="card-title">painting</h2>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img loading="lazy" src="images/services/dk-service-fences.png" alt="Fences Service"
+                                class="card-image">
+                            <h2 class="card-title">fences</h2>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
             </div>
         </div>
-        <button class="service-arrow service-arrow-right" id="serviceNext">
-            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 13L9 8" stroke="#09090B" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-            </svg>
-        </button>
+
     </section>
 
     <!-- About Us Section -->
