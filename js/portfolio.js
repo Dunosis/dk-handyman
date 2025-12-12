@@ -61,98 +61,107 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function initPortfolioCarousels() {
         const carousels = document.querySelectorAll('.portfolio-image-carousel');
-        
-        carousels.forEach((carousel, carouselIndex) => {
+    
+        carousels.forEach((carousel) => {
             const track = carousel.querySelector('.portfolio-image-track');
             const slides = carousel.querySelectorAll('.portfolio-image-slide');
             const prevBtn = carousel.querySelector('.portfolio-carousel-arrow-left');
             const nextBtn = carousel.querySelector('.portfolio-carousel-arrow-right');
-            
+    
             if (!track || slides.length === 0) return;
-            
-            if (slides.length <= 1) {
+    
+            // ============================================================
+            // 🚫 If there is only one image → do not show arrows or animation
+            // ============================================================
+            if (slides.length === 1) {
                 if (prevBtn) prevBtn.style.display = "none";
                 if (nextBtn) nextBtn.style.display = "none";
+    
+                // Do not clone, do not move, do not auto-scroll
+                track.style.transform = "translateX(0)";
+                return;
             }
-            
-            let currentSlide = 0;
-            let autoScrollInterval;
-            let isPaused = false;
-            
-            function updateCarousel() {
+            const firstClone = slides[0].cloneNode(true);
+            const lastClone = slides[slides.length - 1].cloneNode(true);
+    
+            firstClone.classList.add("clone");
+            lastClone.classList.add("clone");
+    
+            // Insert clones
+            track.appendChild(firstClone);
+            track.insertBefore(lastClone, slides[0]);
+    
+            const allSlides = carousel.querySelectorAll('.portfolio-image-slide');
+            let index = 1;
+    
+            function setInitialPosition() {
                 const slideWidth = track.offsetWidth;
-                track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-                
-                // Update button states
-                if (prevBtn) prevBtn.disabled = currentSlide === 0;
-                if (nextBtn) nextBtn.disabled = currentSlide === slides.length - 1;
+                track.style.transition = "none";
+                track.style.transform = `translateX(-${index * slideWidth}px)`;
             }
-            
-            function nextSlide() {
-                if (currentSlide < slides.length - 1) {
-                    currentSlide++;
-                } else {
-                    // Volver al inicio si está al final
-                    currentSlide = 0;
-                }
-                updateCarousel();
+    
+            window.addEventListener("resize", setInitialPosition);
+            setInitialPosition();
+    
+            function moveToIndex() {
+                const slideWidth = track.offsetWidth;
+                track.style.transition = "transform 0.45s ease-in-out";
+                track.style.transform = `translateX(-${index * slideWidth}px)`;
             }
-            
-            function prevSlide() {
-                if (currentSlide > 0) {
-                    currentSlide--;
-                } else {
-                    // Ir al final si está al inicio
-                    currentSlide = slides.length - 1;
-                }
-                updateCarousel();
-            }
-            
-            function autoScroll() {
-                if (isPaused) return;
-                nextSlide();
-            }
-            
-            function startAutoScroll() {
-                clearInterval(autoScrollInterval);
-                autoScrollInterval = setInterval(autoScroll, 4000); // Auto-scroll cada 4 segundos
-            }
-            
-            function pauseAutoScroll() {
-                isPaused = true;
-                clearInterval(autoScrollInterval);
-            }
-            
-            function resumeAutoScroll() {
-                isPaused = false;
-                startAutoScroll();
-            }
-            
-            if (prevBtn) {
-                prevBtn.addEventListener('click', () => {
-                    prevSlide();
-                    pauseAutoScroll();
-                    setTimeout(resumeAutoScroll, 5000); // Reanudar después de 5 segundos
-                });
-            }
-            
+    
             if (nextBtn) {
-                nextBtn.addEventListener('click', () => {
-                    nextSlide();
-                    pauseAutoScroll();
-                    setTimeout(resumeAutoScroll, 5000); // Reanudar después de 5 segundos
+                nextBtn.addEventListener("click", () => {
+                    index++;
+                    moveToIndex();
+                    restartAutoScroll();
                 });
             }
-            
-            // Pausar auto-scroll al hacer hover
-            carousel.addEventListener('mouseenter', pauseAutoScroll);
-            carousel.addEventListener('mouseleave', resumeAutoScroll);
-            
-            // Initial state
-            updateCarousel();
-            
-            // Iniciar auto-scroll
-            startAutoScroll();
+    
+            if (prevBtn) {
+                prevBtn.addEventListener("click", () => {
+                    index--;
+                    moveToIndex();
+                    restartAutoScroll();
+                });
+            }
+    
+            // ============================================================
+            // SMOOTH LOOP WITHOUT JUMPING
+            // ============================================================
+            track.addEventListener("transitionend", () => {
+                if (allSlides[index].classList.contains("clone")) {
+                    track.style.transition = "none";
+    
+                    if (index === allSlides.length - 1) {
+                        index = 1; // volver al primero real
+                    } else if (index === 0) {
+                        index = allSlides.length - 2; // volver al último real
+                    }
+    
+                    const slideWidth = track.offsetWidth;
+                    track.style.transform = `translateX(-${index * slideWidth}px)`;
+                }
+            });
+    
+            // ============================================================
+            // AUTO SCROLL
+            // ============================================================
+            let autoScroll = setInterval(() => {
+                index++;
+                moveToIndex();
+            }, 4000);
+    
+            function restartAutoScroll() {
+                clearInterval(autoScroll);
+                autoScroll = setInterval(() => {
+                    index++;
+                    moveToIndex();
+                }, 4000);
+            }
+    
+            // Pause on hover
+            carousel.addEventListener("mouseenter", () => clearInterval(autoScroll));
+            carousel.addEventListener("mouseleave", restartAutoScroll);
         });
     }
 
