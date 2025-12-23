@@ -133,9 +133,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     track.style.transition = "none";
     
                     if (index === allSlides.length - 1) {
-                        index = 1; // volver al primero real
+                        index = 1; // go back to the first real slide
                     } else if (index === 0) {
-                        index = allSlides.length - 2; // volver al último real
+                        index = allSlides.length - 2; // go back to the last real slide
                     }
     
                     const slideWidth = track.offsetWidth;
