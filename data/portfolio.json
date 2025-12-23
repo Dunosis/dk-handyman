@@ -8,7 +8,7 @@
   },
   {
     "name": "GARAGE DOOR PAINTING",
-    "description": "Completed the full painting of the garage door in a single day.",
+    "description": "Completed the full painting of the garage door.",
     "images": [
       "images/portfolio/02/dk-01.png"
     ]
@@ -43,8 +43,8 @@
     ]
   },
 {
-    "name": "KITCHEN CABINET INSTALLATION",
-    "description": "Installed new kitchen cabinets with clients specific requirements.",
+    "name": "KITCHEN CABINET REMODELING",
+    "description": "Updated kitchen cabinets with clients specific requirements.",
     "images": [
       "images/portfolio/06/dk-01.jpg",
       "images/portfolio/06/dk-02.jpg",
@@ -79,7 +79,7 @@
  },
  {
    "name": "BATHROOM AND KITCHEN REMODELING",
-   "description": "New paint brightens kitchen cabinets, walls and guest bathroom.",
+   "description": "New paint, flooring, and baseboards brightens kitchen cabinets, walls and guest bathroom.",
     "images": [
       "images/portfolio/10/dk-01.jpg",
       "images/portfolio/10/dk-02.jpg",
@@ -87,8 +87,8 @@
     ]
  },
  {
-   "name": "CURVED FENCE",
-   "description": "Built a cedar privacy fence with a curved finish.",
+   "name": "PRIVACY FENCE",
+   "description": "Built a privacy fence.",
     "images": [
       "images/portfolio/11/dk-01.jpg",
       "images/portfolio/11/dk-02.jpg"
@@ -111,7 +111,7 @@
     ]
  },
  {
-   "name": "APARTMENT PAINTING AND FLOORING",
+   "name": "APARTMENT UPDATED",
    "description": "Cleaned, painted, removed carpet and installed new flooring.",
     "images": [
       "images/portfolio/14/dk-01.jpg",
