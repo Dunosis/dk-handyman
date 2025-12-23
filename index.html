@@ -4,25 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DK Handyman - Professional handyman services in Copperas Cove, TX">
-    <title>DK Handyman - Specialized Quality Work</title>
+    <meta name="description" content="Professional handyman services in Copperas Cove, TX Areas">
+    <title>DK Handyman - Specialized Quality Handyman Work</title>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="DK Handyman" />
-    <meta property="og:description" content="DK Handyman - Contact us for your home repair needs" />
+    <meta property="og:description" content="Contact us for your home repair needs" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://dkhandyman.com/" />
-    <meta property="og:image" content="https://dkhandyman.com/assets/images/home/hiking4.jpg" />
+    <meta property="og:url" content="https://dkhandyman.us.com/" />
+    <meta property="og:image" content="https://dkhandyman.us.com/images/logo/dk-logo.png" />
 
     <!-- Twitter Cards (recomendado) -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="DK Handyman" />
-    <meta name="twitter:description" content="DK Handyman - Contact us for your home repair needs" />
-    <meta name="twitter:image" content="https://dkhandyman.com/assets/images/home/hiking4.jpg" />
+    <meta name="twitter:description" content="Contact us for your home repair needs" />
+    <meta name="twitter:image" content="https://dkhandyman.us.com/images/logo/dk-logo.png" />
 
     <!-- Plausible Analytics -->
-    <script defer data-domain="dkhandyman.com" src="https://analytics.dunosis.com/js/script.js"></script>
-    
+    <script defer data-domain="dkhandyman.us.com" src="https://analytics.dunosis.com/js/script.outbound-links.pageview-props.tagged-events.js"></script>
+
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/carousels/services.css">
     <link rel="stylesheet" href="css/carousels/testimonials.css">
@@ -31,6 +31,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Archivo+Narrow:wght@400;500;700&family=Archivo+Black&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet">
+    <!-- 1) Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- 2) Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- 3) Swiper JS (before your own JS) -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -84,70 +92,61 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <button class="service-arrow service-arrow-left" id="servicePrev">
-            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 18L9 13L15 8" stroke="#09090B" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-            </svg>
-        </button>
-        <div class="services-wrapper">
-            <div class="services-container">
-                <a href="/portfolio.html" class="service-card">
-                    <div class="service-image-container">
-                        <div class="service-image-overlay"></div>
-                        <img loading="lazy" src="images/services/dk-service-drywall.png" alt="Drywall Service" class="service-image">
-                    </div>
-                    <div class="service-title-bg">
-                        <p class="service-title">DRYWALL</p>
-                    </div>
-                </a>
-                <a href="/portfolio.html" class="service-card">
-                    <div class="service-image-container">
-                        <div class="service-image-overlay"></div>
-                        <img loading="lazy" src="images/services/dk-service-general-repairs.png" alt="General Repairs Service"
-                            class="service-image">
-                    </div>
-                    <div class="service-title-bg">
-                        <p class="service-title">GENERAL REPAIRS</p>
-                    </div>
-                </a>
-                <a href="/portfolio.html" class="service-card">
-                    <div class="service-image-container">
-                        <div class="service-image-overlay"></div>
-                        <img loading="lazy" src="images/services/dk-service-flooring.png" alt="Flooring Service" class="service-image">
-                    </div>
-                    <div class="service-title-bg">
-                        <p class="service-title">FLOORING</p>
-                    </div>
-                </a>
-                <a href="/portfolio.html" class="service-card">
-                    <div class="service-image-container">
-                        <div class="service-image-overlay"></div>
-                        <img loading="lazy" src="images/services/dk-service-painting.png" alt="Painting Service" class="service-image">
-                    </div>
-                    <div class="service-title-bg">
-                        <p class="service-title">PAINTING</p>
-                    </div>
-                </a>
-                <a href="/portfolio.html" class="service-card">
-                    <div class="service-image-container">
-                        <div class="service-image-overlay"></div>
-                        <img loading="lazy" src="images/services/dk-service-fences.png" alt="Fences Service" class="service-image">
-                    </div>
-                    <div class="service-title-bg">
-                        <p class="service-title">FENCES</p>
-                    </div>
-                </a>
+
+    <section id="slider-cards">
+
+        <div class="container swiper">
+            <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+
+                    <li class="card-item swiper-slide">
+                        <a href="portfolio.html" class="card-link">
+                            <img loading="lazy" src="images/services/dk-service-drywall.png" alt="Drywall Service"
+                                class="card-image">
+                            <h2 class="card-title">drywall</h2>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="portfolio.html" class="card-link">
+                            <img loading="lazy" src="images/services/dk-service-general-repairs.png"
+                                alt="General Repairs Service" class="card-image">
+                            <h2 class="card-title">general repairs</h2>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="portfolio.html" class="card-link">
+                            <img loading="lazy" src="images/services/dk-service-flooring.png" alt="Flooring Service"
+                                class="card-image">
+                            <h2 class="card-title">flooring</h2>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="portfolio.html" class="card-link">
+                            <img loading="lazy" src="images/services/dk-service-painting.png" alt="Painting Service"
+                                class="card-image">
+                            <h2 class="card-title">painting</h2>
+                        </a>
+                    </li>
+
+                    <li class="card-item swiper-slide">
+                        <a href="portfolio.html" class="card-link">
+                            <img loading="lazy" src="images/services/dk-service-fences.png" alt="Fences Service"
+                                class="card-image">
+                            <h2 class="card-title">fences</h2>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
             </div>
         </div>
-        <button class="service-arrow service-arrow-right" id="serviceNext">
-            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 13L9 8" stroke="#09090B" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-            </svg>
-        </button>
+
     </section>
 
     <!-- About Us Section -->
@@ -163,7 +162,7 @@
                     contractor.</p>
                 <p>&nbsp;</p>
                 <p>We offer exceptional workmanship, reliability, and an unwavering commitment to making your house
-                    better. Whether you need a simple fix like a leaky faucet, a fresh coat of paint, or complex drywall
+                    better. Whether you need a simple fix like a fresh coat of paint, or complex drywall
                     repairs, we're here to help you create a space you're proud to call home—without stretching your
                     budget.</p>
                 <p>&nbsp;</p>
@@ -176,11 +175,11 @@
     <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="testimonials-wrapper">
-    
+
             <h2 class="testimonials-title">HEAR FROM<br>OUR CLIENTS</h2>
-    
+
             <div class="testimonials-container">
-    
+
                 <!-- Flecha izquierda (solo desktop) -->
                 <button class="testimonial-arrow testimonial-arrow-left desktop-arrow" id="testimonialPrev">
                     <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -188,18 +187,9 @@
                             stroke-linejoin="round" />
                     </svg>
                 </button>
-    
+
                 <div class="testimonial-box">
-                    <div class="testimonial-slide active">
-                        <p class="testimonial-text">To have work done by a person that cares so much about the quality
-                            of their work is great but DK Handyman also cares about us. He did a wonderful job on the
-                            hallway and office. He got the job done ahead of time and it looks amazing. To have someone
-                            come in and care as much about our home as we do is amazing. He is polite, respectful and a
-                            true believer a great person you can rely on. Thank you so much. Already planning the next
-                            project.</p>
-                        <p class="testimonial-author">PTL</p>
-                    </div>
-    
+
                     <div class="testimonial-slide">
                         <p class="testimonial-text">We had a pipe leak above our ceiling and needed to have the drywall
                             repaired and ceiling painted. Dave came over the same day to give a quote, which was the
@@ -208,8 +198,104 @@
                             was at our house. I definitely recommend DK Handyman!</p>
                         <p class="testimonial-author">Jaime R</p>
                     </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">To have work done by a person that cares so much about the quality
+                            of their work is great but DK Handyman also cares about us. He did a wonderful job on the
+                            hallway and office. He got the job done ahead of time and it looks amazing. To have someone
+                            come in and care as much about our home as we do is amazing. He is polite, respectful and a
+                            true believer a great person you can rely on. Thank you so much. Already planning the next
+                            project.</p>
+                        <p class="testimonial-author">PTL</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">I have know and done business with DK Handyman for 2 years now and,
+                            they are very knowledgeable, professional and very attentive to you and your needs when it
+                            comes to any work you would like to have done. They have painted the whole outside of my
+                            house trim and all. Now, they came back and repainted my garage door because I got it
+                            replaced. I recommend them to everyone.</p>
+                        <p class="testimonial-author">Antonio</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">David helped us take an old run down house and renovate it into a
+                            contemporary home. He did interior painting, flooring, minor electrical and plumbing, new
+                            hardware, and cleaning. We were extremely pleased with his work! He also did the work very
+                            quickly. We would not hesitate to hire him again.</p>
+                        <p class="testimonial-author">Rex Ruge</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">David was great to work with, he got the jobs done fast and
+                            everything looked great. He also was very kind and respectful which I always appreciate from
+                            people coming into your home. Highly recommend him for any projects you need done, big or
+                            small.</p>
+                        <p class="testimonial-author">Gabrielle Gibbons</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">David from Handyman responded to my call immediately when I had a
+                            water leak and damage in the water heater and AC closet. They assessed all damages and were
+                            able to do a complete repair to the dry wall, base boards, and insulation, with great
+                            pricing. The work was fast and efficient. Can’t even tell the damage was there in the first
+                            place. Will definitely call them again.</p>
+                        <p class="testimonial-author">Gilbert Carreon</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">David from DK Handyman was very prompt and professional on
+                            everything he did for me. From getting proposal to completing all work performed. He is man
+                            of his word, which is hard to find this day and age. Would recommend him to anybody needing
+                            an honest, professional service technician.</p>
+                        <p class="testimonial-author">Raymond Schwertner</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">Awesome guy, work was done smoothly with no issues, and he arrived
+                            on time, you will not be disappointed. I am in the process of doing more as we speak with
+                            DK, reach out to him does good work.</p>
+                        <p class="testimonial-author">Jeremy Williams</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">Single Mom here of 4 kids, had some repairs done that they were
+                            responsible for the damage.
+                            Very Happy with the work that was done!! Definitely will recommend. They even went above and
+                            beyond and fixed parts of my crown molding. Thank You so much.
+                        </p>
+                        <p class="testimonial-author">Lisa Contreras</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">I had two toilets in my house that I could not tighten down. I
+                            contacted David and he came out the next day. He was able to identify and fix the problem at
+                            a great price. I highly recommend him if you need handyman services.</p>
+                        <p class="testimonial-author">David Moore</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">The work as contracted was completed in less time than anticipated
+                            .I would recommend DK Handyman to anyone.</p>
+                        <p class="testimonial-author">James Cooney</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">DK Handyman painted the trim on my house and fixed hardy boards
+                            around the back of my house as well as fixed the wood at the bottom of one of the sides on
+                            my garage. They did a great job! David was very patient and understanding with me, I had to
+                            change the job that I wanted completed and he understood and accommodated. He came to do the
+                            work with his crew on a Saturday, which was also very nice and accommodating. I recommend
+                            him highly for any job that you are needing done around your home. I will be hiring him
+                            again to do some more work for me. He even said he can trim my trees when he comes back.
+                        </p>
+                        <p class="testimonial-author">Lisa Burkhart</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">Awesome work on handicap rails for two rooms! I highly recommend
+                            him. He did an excellent job on my roof and bathroom fixtures as well!</p>
+                        <p class="testimonial-author">Shirley Ruth</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">To have work done by a person that cares so much about the quality
+                            of their work is great but DK Handyman also cares about us. He did a wonderful job on the
+                            hallway and office. He got the job done ahead of time and it looks amazing. To have someone
+                            come in and care as much about our home as we do is amazing. He is polite, respectful and a
+                            true believer a great person you can rely on. Thank you so much. Already planning the next
+                            project.</p>
+                        <p class="testimonial-author">Bill Davis</p>
+                    </div>
                 </div>
-    
+
                 <!-- arrow left (only desktop) -->
                 <button class="testimonial-arrow testimonial-arrow-right desktop-arrow" id="testimonialNext">
                     <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -217,9 +303,9 @@
                             stroke-linejoin="round" />
                     </svg>
                 </button>
-    
+
             </div>
-    
+
             <!-- Moving arrows below the testimonial-->
             <div class="testimonial-arrows-group mobile-arrows">
                 <button class="testimonial-arrow" id="testimonialPrevMobile">
@@ -228,7 +314,7 @@
                             stroke-linejoin="round" />
                     </svg>
                 </button>
-    
+
                 <button class="testimonial-arrow" id="testimonialNextMobile">
                     <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 18L15 13L9 8" stroke="#09090B" stroke-width="2" stroke-linecap="round"
@@ -236,7 +322,7 @@
                     </svg>
                 </button>
             </div>
-    
+
         </div>
     </section>
 
@@ -252,7 +338,8 @@
             <div class="footer-contact">
                 <button class="footer-call-btn">CALL NOW!</button>
                 <div class="footer-contact-info">
-                    <a href="https://www.facebook.com/profile.php?id=100057608531488" target="_blank" class="footer-contact-item">
+                    <a href="https://www.facebook.com/profile.php?id=100057608531488" target="_blank"
+                        class="footer-contact-item">
                         <svg class="footer-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -273,7 +360,7 @@
                     <a href="mailto:dkhandyman55@gmail.com" class="footer-contact-item">
                         <svg class="footer-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path 
+                            <path
                                 d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"
                                 fill="white" />
                         </svg>
@@ -282,7 +369,7 @@
                 </div>
             </div>
             <div class="footer-copyright">
-                <p>© Copyright 2025 DK Handyman LLC. All rights reserved.</p>
+                <p>© Copyright 2025 DK Handyman. All rights reserved.</p>
                 <a href="https://dunosis.com" target="_blank" rel="noopener noreferrer" class="footer-made-by">Made by
                     <span class="dunosis-bold text-2xl">Dunosis</span></a>
             </div>

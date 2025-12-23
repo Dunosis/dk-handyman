@@ -1,118 +1,57 @@
+/* ========================================= */
+/* ❗ CSS LAYOUT FOR CARD SLIDER ❗ */
+/* ========================================= */
 
-/* Services Section */
-.services {
-    position: relative;
-    padding: 10px 10px;
-    width: 100%;
-    margin: 0 ;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.services-wrapper {
-    flex: 1;
-    overflow: hidden;
-    min-width: 0;
-}
-
-.services-container {
-    display: flex;
-    gap: 35px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-    padding: 10px 0px;
-    width: 100%;
+#slider-cards * {
+    font-family: sans-serif;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.services-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
-}
-
-.service-card {
-    position: relative;
-    display: inline-grid;
-    grid-template-columns: max-content;
-    grid-template-rows: max-content;
-    place-items: start;
-    flex-shrink: 0;
-    scroll-snap-align: start;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s ease forwards;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    border-radius: 20px; 
-    overflow: hidden; 
-}
-
-.service-card:nth-child(1) { animation-delay: 0.1s; }
-.service-card:nth-child(2) { animation-delay: 0.2s; }
-.service-card:nth-child(3) { animation-delay: 0.3s; }
-.service-card:nth-child(4) { animation-delay: 0.4s; }
-.service-card:nth-child(5) { animation-delay: 0.5s; }
-
-.service-card:hover {
-    transform: translateY(-10px);
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.service-image-container {
-    position: relative;
-    width: 400px;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover .service-image-container {
-    transform: scale(1.05);
-}
-
-.service-image-overlay {
-    position: absolute;
-    background-color: var(--gray-overlay);
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    z-index: 1;
-}
-
-.service-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.service-title-bg {
-    position: absolute;
-    background-color: var(--red-primary);
-    width: 400px;
-    height: 65px;
-    border-radius: 5px;
-    bottom: 0;
+#slider-cards {
     display: flex;
-    align-items: center;
     justify-content: center;
-    z-index: 3;
+    align-items: center;
+    padding: 60px 0;
 }
 
-.service-title {
+/* Slider Wrapper */
+#slider-cards .card-wrapper {
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+
+/* Cards */
+#slider-cards .card-item {
+    list-style: none;
+}
+
+#slider-cards .card-link {
+    display: block;
+    background: var(--red-primary);
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+    user-select: none;
+    overflow: hidden;
+}
+
+#slider-cards .card-link:hover {
+    border-color: #5372f0;
+}
+
+#slider-cards .card-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+/* Title */
+#slider-cards .card-title {
     font-family: 'Archivo Narrow', sans-serif;
     font-weight: 400;
     font-size: 36px;
@@ -120,149 +59,52 @@
     color: var(--white);
     text-transform: uppercase;
     white-space: nowrap;
-    margin: 0;
+    text-align: center;
+    padding: 10px 5px;
 }
 
-.service-card-fences {
-    margin-left: auto;
-}
-
-.service-arrow {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    flex-shrink: 0;
-    transition: all 0.3s ease;
-    opacity: 0.8;
-}
-
-.service-arrow svg {
-    width: 32px;
+/* Button */
+#slider-cards .card-button {
     height: 35px;
-    transition: transform 0.3s ease;
+    width: 35px;
+    margin-top: 30px;
+    color: var(--red-primary);
+    background: none;
+    border-radius: 50%;
+    border: 2px solid #5382f0;
+    cursor: pointer;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
 }
 
-.service-arrow:hover {
+#slider-cards .card-link:hover .card-button {
+    background: #5372f0;
+    color: #fff;
+}
+
+/* Swiper Navigation */
+#slider-cards .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: var(--red-primary);
+}
+
+#slider-cards .swiper-pagination-bullet-active {
     opacity: 1;
-    transform: scale(1.1);
 }
 
-.service-arrow:hover svg {
-    transform: translateX(-3px);
+#slider-cards .swiper-slide-button {
+    color: var(--red-primary);
+    margin-top: -35px;
 }
 
-.service-arrow.service-arrow-right:hover svg {
-    transform: translateX(3px);
-}
-
-.service-arrow:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-    transform: scale(1);
-}
-
-.service-arrow:disabled:hover svg {
-    transform: translateX(0);
-}
-
-/* Responsive Design */
-@media (max-width: 1728px) {    
-    .services {
-        width: 100%;
-        padding: 10px 40px;
+/* Responsive */
+@media (max-width: 768px) {
+    #slider-cards .card-wrapper {
+        margin: 0 10px 10px;
     }
-    
-    .carousel-slide {
-        width: 100vw;
+    #slider-cards .swiper-slide-button {
+        display: none;
     }
-}
-
-@media (max-width: 1200px) {
-    
-    .services-container {
-        justify-content: flex-start;
-    }
-    
-    .service-card-fences {
-        margin-left: 0;
-    }
-    
-    .service-arrow {
-        padding: 8px;
-    }
-    
-    .service-arrow svg {
-        width: 24px;
-        height: 26px;
-    }
-}
-
-
-@media (max-width: 968px) {
-    
-    .services {
-        padding: 20px 10px;
-    }
-    
-    .services-container {
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 10px 10px;
-    }   
-}
-
-
-@media (max-width: 640px) {
-
-    /* Services Section */
-    
-    .services {
-        padding: 0px 0px;
-        gap: 5px;
-    }
-
-    .services-wrapper {
-        overflow: hidden;
-        width: 100%;
-    }
-
-    .services-container {
-        display: flex;
-        gap: 0;                     /* sin espacio entre tarjetas */
-        padding: 0;                 /* elimina padding lateral */
-        scroll-snap-type: x mandatory;
-    }
-
-    .service-card {
-        min-width: 100%;            /* clave: ocupa toda la pantalla */
-        max-width: 100%;
-        scroll-snap-align: center;
-        display: flex;
-        justify-content: center;
-        border-radius: 10px; 
-        overflow: hidden; 
-    }
-
-    .service-image-container {
-        width: 100%;                /* tarjeta 100% del ancho */
-        height: 320px;
-        max-width: 100%;         /* opcional */
-    }
-
-    .service-title-bg {
-        width: 100%;
-        height: 60px;
-        border-radius: 0;
-    }
-
-    .service-title {
-        font-size: 24px;
-    }
-    
-
 }
