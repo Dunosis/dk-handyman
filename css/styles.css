@@ -96,7 +96,7 @@ h1,h2,h3,h4,p {
 .logo-image {
     width: 180px;
     height: 180px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: 50% 50%;
     pointer-events: none;
     border-radius: 30px;
