@@ -1,5 +1,114 @@
 [
   {
+    "name": "Bathroom Update",
+    "description": "Updated bathroom with new tile, fixtures, and paint.",
+    "images": [
+      "images/portfolio/16/dk-01.jpg",
+      "images/portfolio/16/dk-02.jpg"
+    ]
+  },
+  {
+    "name": "Flooring Installation",
+    "description": "Installed new flooring in the single room.",
+    "images": [
+      "images/portfolio/17/dk-01.jpg",
+      "images/portfolio/17/dk-02.jpg"
+    ]
+  },
+  {
+    "name": "Circular Tree Bench",
+    "description": "Installed a circular tree bench in the backyard.",
+    "images": [
+      "images/portfolio/18/dk-01.jpg",
+      "images/portfolio/18/dk-02.jpg"
+    ]
+  },
+  {
+    "name": "Installed New Fence",
+    "description": "Installed a new fence in the backyard.",
+    "images": [
+      "images/portfolio/19/dk-01.jpg",
+      "images/portfolio/19/dk-02.jpg"
+    ]
+  },
+  {
+    "name": "Fence Installation",
+    "description": "Installed a new fence in the backyard.",
+    "images": [
+      "images/portfolio/20/dk-01.jpg"
+    ]
+  },
+  {
+    "name": "Painted Living Room",
+    "description": "Painted the living room with a new color.",
+    "images": [
+      "images/portfolio/21/dk-01.jpg"
+    ]
+  },
+  {
+    "name": "Outdoor Deck Maintenance",
+    "description": "Repainted and resealed the outdoor deck.",
+    "images": [
+      "images/portfolio/22/dk-01.jpg"
+    ]
+  },
+  {
+    "name": "Painted Kitchen Cabinets",
+    "description": "Painted the kitchen cabinets with a new color.",
+    "images": [
+      "images/portfolio/23/dk-01.jpg"
+    ]
+  },
+  {
+    "name": "Installed New Front Door",
+    "description": "Installed a new front door in the house.",
+    "images": [
+      "images/portfolio/24/dk-01.jpg"
+    ]
+  },
+  {
+    "name": "Driveway Cleaning",
+    "description": "Pressure washed the driveway.",
+    "images": [
+      "images/portfolio/25/dk-01.jpg"
+    ]
+  },
+  {
+    "name": "New Shower Installation",
+    "description": "Installed and tiled a new shower in the bathroom.",
+    "images": [
+      "images/portfolio/26/dk-01.jpg"
+    ]
+  },
+  {
+    "name": "Garage Door Installation",
+    "description": "Installed a new garage door in the garage.",
+    "images": [
+      "images/portfolio/27/dk-01.jpg"
+    ]
+  },
+  {
+    "name": "Retile Bathroom",
+    "description": "Retiled the bathroom shower/tub area with new tile.",
+    "images": [
+      "images/portfolio/28/dk-01.jpg"
+    ]
+  },
+  {
+    "name": "Painted Bathroom Cabinets",
+    "description": "Painted the bathroom cabinets with a new color.",
+    "images": [
+      "images/portfolio/29/dk-01.jpg"
+    ]
+  },
+  {
+    "name": "Painted Room",
+    "description": "Painted the room with a new color.",
+    "images": [
+      "images/portfolio/30/dk-01.jpg"
+    ]
+  },
+  {
     "name": "DOOR INSTALLATION",
     "description": "Installed new door and completed the full hardware installation.",
     "images": [
