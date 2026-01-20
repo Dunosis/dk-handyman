@@ -24,8 +24,8 @@
     ]
   },
   {
-    "name": "Installed New Fence",
-    "description": "Installed a new fence in the backyard.",
+    "name": "Fence Maintenance",
+    "description": "Stained and resealed the fence in the backyard.",
     "images": [
       "images/portfolio/19/dk-01.jpg",
       "images/portfolio/19/dk-02.jpg"
@@ -39,8 +39,8 @@
     ]
   },
   {
-    "name": "Painted Living Room",
-    "description": "Painted the living room with a new color.",
+    "name": "Remodeled Living Room",
+    "description": "Remodeled the living room with new flooring, paint, barn doors and baseboards.",
     "images": [
       "images/portfolio/21/dk-01.jpg"
     ]
@@ -67,8 +67,8 @@
     ]
   },
   {
-    "name": "Driveway Cleaning",
-    "description": "Pressure washed the driveway.",
+    "name": "Built Car Port",
+    "description": "Built a car port in the existing driveway.",
     "images": [
       "images/portfolio/25/dk-01.jpg"
     ]
