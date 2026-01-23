@@ -129,10 +129,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Load more button
         if (loadMoreBtn) {
             loadMoreBtn.addEventListener('click', function() {
+                const previouslyDisplayed = currentlyDisplayed;
                 displayItems();
                 
                 // Scroll to first newly loaded item
-                const newItemIndex = currentlyDisplayed - itemsPerPage;
+                const newItemIndex = previouslyDisplayed;
                 const newItem = document.getElementById(`portfolio-item-${newItemIndex}`);
                 if (newItem) {
                     newItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
