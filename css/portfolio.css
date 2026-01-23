@@ -125,6 +125,77 @@
     color: var(--black);
 }
 
+/* Portfolio Filters */
+.portfolio-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1728px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+.filter-btn {
+    background-color: var(--white);
+    color: var(--red-primary);
+    font-family: 'Archivo Narrow', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 2px solid var(--red-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    background-color: var(--red-primary);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(247, 23, 23, 0.3);
+}
+
+.filter-btn.active {
+    background-color: var(--red-primary);
+    color: var(--white);
+    box-shadow: 0 4px 12px rgba(247, 23, 23, 0.3);
+}
+
+/* Load More Button */
+.portfolio-load-more {
+    text-align: center;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.load-more-btn {
+    background-color: var(--red-primary);
+    color: var(--white);
+    font-family: 'Archivo Narrow', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 16px 48px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(247, 23, 23, 0.3);
+}
+
+.load-more-btn:hover {
+    background-color: var(--red-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(247, 23, 23, 0.4);
+}
+
+.load-more-btn:active {
+    transform: translateY(0);
+}
+
 @media (max-width: 960px) {
     
     .portfolio-page,
@@ -146,6 +217,21 @@
     .portfolio-subtitle,
     .contact-subtitle {
         font-size: 20px;
+    }
+
+    .portfolio-filters {
+        gap: 12px;
+        margin-bottom: 40px;
+    }
+
+    .filter-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .load-more-btn {
+        font-size: 20px;
+        padding: 14px 40px;
     }
 }
 
@@ -169,6 +255,24 @@
         padding: 8px;
     }
 
+    .portfolio-filters {
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .filter-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .portfolio-load-more {
+        margin: 40px auto;
+    }
+
+    .load-more-btn {
+        font-size: 18px;
+        padding: 12px 32px;
+    }
 
     #portfolio-items-container {
         margin-bottom: 20px;

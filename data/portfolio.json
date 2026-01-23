@@ -2,6 +2,7 @@
   {
     "name": "Bathroom Update",
     "description": "Updated bathroom with new tile, fixtures, and paint.",
+    "category": "bathroom",
     "images": [
       "images/portfolio/16/dk-01.jpg",
       "images/portfolio/16/dk-02.jpg"
@@ -10,6 +11,7 @@
   {
     "name": "Flooring Installation",
     "description": "Installed new flooring in the single room.",
+    "category": "flooring",
     "images": [
       "images/portfolio/17/dk-01.jpg",
       "images/portfolio/17/dk-02.jpg"
@@ -18,6 +20,7 @@
   {
     "name": "Circular Tree Bench",
     "description": "Installed a circular tree bench in the backyard.",
+    "category": "decks",
     "images": [
       "images/portfolio/18/dk-01.jpg",
       "images/portfolio/18/dk-02.jpg"
@@ -26,6 +29,7 @@
   {
     "name": "Fence Maintenance",
     "description": "Stained and resealed the fence in the backyard.",
+    "category": "fencing",
     "images": [
       "images/portfolio/19/dk-01.jpg",
       "images/portfolio/19/dk-02.jpg"
@@ -34,6 +38,7 @@
   {
     "name": "Fence Installation",
     "description": "Installed a new fence in the backyard.",
+    "category": "fencing",
     "images": [
       "images/portfolio/20/dk-01.jpg"
     ]
@@ -41,6 +46,7 @@
   {
     "name": "Remodeled Living Room",
     "description": "Remodeled the living room with new flooring, paint, barn doors and baseboards.",
+    "category": "remodeling",
     "images": [
       "images/portfolio/21/dk-01.jpg"
     ]
@@ -48,6 +54,7 @@
   {
     "name": "Outdoor Deck Maintenance",
     "description": "Repainted and resealed the outdoor deck.",
+    "category": "decks",
     "images": [
       "images/portfolio/22/dk-01.jpg"
     ]
@@ -55,6 +62,7 @@
   {
     "name": "Painted Kitchen Cabinets",
     "description": "Painted the kitchen cabinets with a new color.",
+    "category": "kitchen",
     "images": [
       "images/portfolio/23/dk-01.jpg"
     ]
@@ -62,6 +70,7 @@
   {
     "name": "Installed New Front Door",
     "description": "Installed a new front door in the house.",
+    "category": "doors",
     "images": [
       "images/portfolio/24/dk-01.jpg"
     ]
@@ -69,6 +78,7 @@
   {
     "name": "Built Car Port",
     "description": "Built a car port in the existing driveway.",
+    "category": "decks",
     "images": [
       "images/portfolio/25/dk-01.jpg"
     ]
@@ -76,6 +86,7 @@
   {
     "name": "New Shower Installation",
     "description": "Installed and tiled a new shower in the bathroom.",
+    "category": "bathroom",
     "images": [
       "images/portfolio/26/dk-01.jpg"
     ]
@@ -83,6 +94,7 @@
   {
     "name": "Garage Door Installation",
     "description": "Installed a new garage door in the garage.",
+    "category": "doors",
     "images": [
       "images/portfolio/27/dk-01.jpg"
     ]
@@ -90,6 +102,7 @@
   {
     "name": "Retile Bathroom",
     "description": "Retiled the bathroom shower/tub area with new tile.",
+    "category": "bathroom",
     "images": [
       "images/portfolio/28/dk-01.jpg"
     ]
@@ -97,6 +110,7 @@
   {
     "name": "Painted Bathroom Cabinets",
     "description": "Painted the bathroom cabinets with a new color.",
+    "category": "bathroom",
     "images": [
       "images/portfolio/29/dk-01.jpg"
     ]
@@ -104,6 +118,7 @@
   {
     "name": "Painted Room",
     "description": "Painted the room with a new color.",
+    "category": "painting",
     "images": [
       "images/portfolio/30/dk-01.jpg"
     ]
@@ -111,6 +126,7 @@
   {
     "name": "DOOR INSTALLATION",
     "description": "Installed new door and completed the full hardware installation.",
+    "category": "doors",
     "images": [
       "images/portfolio/01/dk-01.png"
     ]
@@ -118,6 +134,7 @@
   {
     "name": "GARAGE DOOR PAINTING",
     "description": "Completed the full painting of the garage door.",
+    "category": "painting",
     "images": [
       "images/portfolio/02/dk-01.png"
     ]
@@ -125,6 +142,7 @@
   {
     "name": "DECK AND ROOF",
     "description": "Built the deck and roof.",
+    "category": "decks",
     "images": [
       "images/portfolio/03/dk-01.jpg",
       "images/portfolio/03/dk-02.jpg",
@@ -134,6 +152,7 @@
   {
     "name": "DECK CONSTRUCTION",
     "description": "Complete rebuild of patio deck.",
+    "category": "decks",
     "images": [
       "images/portfolio/04/dk-01.jpg",
       "images/portfolio/04/dk-02.jpg"
@@ -142,6 +161,7 @@
   { 
     "name": "HOUSE PAINTING",
     "description": "Work on sanding, repairs, primer, and two coats of Sherwin-Williams Paint.",
+    "category": "painting",
     "images": [
       "images/portfolio/05/dk-01.jpg",
       "images/portfolio/05/dk-02.jpg",
@@ -151,77 +171,85 @@
       "images/portfolio/05/dk-06.jpg"
     ]
   },
-{
+  {
     "name": "KITCHEN CABINET REMODELING",
     "description": "Updated kitchen cabinets with clients specific requirements.",
+    "category": "kitchen",
     "images": [
       "images/portfolio/06/dk-01.jpg",
       "images/portfolio/06/dk-02.jpg",
       "images/portfolio/06/dk-03.jpg"
     ]
- },
- {
-   "name": "BATHROOM REMODELING",
-   "description": "Shower conversion from an existing bathtub.",
+  },
+  {
+    "name": "BATHROOM REMODELING",
+    "description": "Shower conversion from an existing bathtub.",
+    "category": "bathroom",
     "images": [
       "images/portfolio/07/dk-01.jpg"
     ]
- }, 
- {
-   "name": "SCREENED-IN DECK",
-   "description": "Completed a beautiful screened-in deck upgrade, which included a new roof, ceiling, and storm doors.",
+  }, 
+  {
+    "name": "SCREENED-IN DECK",
+    "description": "Completed a beautiful screened-in deck upgrade, which included a new roof, ceiling, and storm doors.",
+    "category": "decks",
     "images": [
       "images/portfolio/08/dk-01.jpg",
       "images/portfolio/08/dk-02.jpg"
     ]
- },
- {
-   "name": "HOUSE REMODELING",
-   "description": "Complete house remodeling.",
+  },
+  {
+    "name": "HOUSE REMODELING",
+    "description": "Complete house remodeling.",
+    "category": "remodeling",
     "images": [
       "images/portfolio/09/dk-01.jpg",
       "images/portfolio/09/dk-02.jpg",
       "images/portfolio/09/dk-03.jpg",
       "images/portfolio/09/dk-04.jpg"
     ]
-
- },
- {
-   "name": "BATHROOM AND KITCHEN REMODELING",
-   "description": "New paint, flooring, and baseboards brightens kitchen cabinets, walls and guest bathroom.",
+  },
+  {
+    "name": "BATHROOM AND KITCHEN REMODELING",
+    "description": "New paint, flooring, and baseboards brightens kitchen cabinets, walls and guest bathroom.",
+    "category": "remodeling",
     "images": [
       "images/portfolio/10/dk-01.jpg",
       "images/portfolio/10/dk-02.jpg",
       "images/portfolio/10/dk-03.jpg"
     ]
- },
- {
-   "name": "PRIVACY FENCE",
-   "description": "Built a privacy fence.",
+  },
+  {
+    "name": "PRIVACY FENCE",
+    "description": "Built a privacy fence.",
+    "category": "fencing",
     "images": [
       "images/portfolio/11/dk-01.jpg",
       "images/portfolio/11/dk-02.jpg"
     ]
- },
- {
-   "name": "WINDOW AND DOOR INSTALLATION",
-   "description": "Installed new windows and a door.",
+  },
+  {
+    "name": "WINDOW AND DOOR INSTALLATION",
+    "description": "Installed new windows and a door.",
+    "category": "doors",
     "images": [
       "images/portfolio/12/dk-01.jpg",
       "images/portfolio/12/dk-02.jpg"
     ]
- },
- {
-   "name": "BATHROOM DEMOLITION AND REMODELING",
-   "description": "Bathroom Demolition and Remodeling.",
+  },
+  {
+    "name": "BATHROOM DEMOLITION AND REMODELING",
+    "description": "Bathroom Demolition and Remodeling.",
+    "category": "bathroom",
     "images": [
       "images/portfolio/13/dk-01.jpg",
       "images/portfolio/13/dk-02.jpg"
     ]
- },
- {
-   "name": "APARTMENT UPDATED",
-   "description": "Cleaned, painted, removed carpet and installed new flooring.",
+  },
+  {
+    "name": "APARTMENT UPDATED",
+    "description": "Cleaned, painted, removed carpet and installed new flooring.",
+    "category": "remodeling",
     "images": [
       "images/portfolio/14/dk-01.jpg",
       "images/portfolio/14/dk-02.jpg",
@@ -230,15 +258,14 @@
       "images/portfolio/14/dk-05.jpg",
       "images/portfolio/14/dk-06.jpg"
     ]
- },
- {
-   "name": "DECK RESTORATION",
-   "description": "The deck structure, surface, and accompanying stairs were fully restored.",
+  },
+  {
+    "name": "DECK RESTORATION",
+    "description": "The deck structure, surface, and accompanying stairs were fully restored.",
+    "category": "decks",
     "images": [
       "images/portfolio/15/dk-01.jpg",
       "images/portfolio/15/dk-02.jpg"
     ]
- }
+  }
 ]
-
-
