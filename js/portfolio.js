@@ -1,29 +1,64 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-       // Portfolio items loader
-       function initPortfolioItems() {
+    // State management
+    let allPortfolioData = [];
+    let filteredData = [];
+    let currentCategory = 'all';
+    let itemsPerPage = 8;
+    let currentlyDisplayed = 0;
+
+    // Portfolio items loader
+    function initPortfolioItems() {
         const container = document.getElementById('portfolio-items-container');
         if (!container) return;
 
         fetch('data/portfolio.json')
             .then(response => response.json())
             .then(data => {
-                data.forEach((item, index) => {
-                    const portfolioItem = createPortfolioItem(item, index);
-                    container.appendChild(portfolioItem);
-                });
-                // Initialize carousels after items are created
-                initPortfolioCarousels();
+                allPortfolioData = data;
+                filteredData = data;
+                displayItems();
+                initFilterButtons();
             })
             .catch(error => {
                 console.error('Error loading portfolio data:', error);
             });
     }
 
+    function displayItems() {
+        const container = document.getElementById('portfolio-items-container');
+        const loadMoreBtn = document.getElementById('load-more-btn');
+        
+        // Clear container
+        container.innerHTML = '';
+        
+        // Determine how many items to show
+        const itemsToShow = Math.min(currentlyDisplayed + itemsPerPage, filteredData.length);
+        
+        // Display items
+        for (let i = 0; i < itemsToShow; i++) {
+            const portfolioItem = createPortfolioItem(filteredData[i], i);
+            container.appendChild(portfolioItem);
+        }
+        
+        currentlyDisplayed = itemsToShow;
+        
+        // Show/hide load more button
+        if (currentlyDisplayed < filteredData.length) {
+            loadMoreBtn.style.display = 'block';
+        } else {
+            loadMoreBtn.style.display = 'none';
+        }
+        
+        // Initialize carousels after items are created
+        initPortfolioCarousels();
+    }
+
     function createPortfolioItem(item, index) {
         const section = document.createElement('section');
         section.className = 'about-us portfolio-item';
         section.id = `portfolio-item-${index}`;
+        section.setAttribute('data-category', item.category);
 
         section.innerHTML = `
             <div class="about-background"></div>
@@ -59,6 +94,53 @@ document.addEventListener('DOMContentLoaded', function() {
         return section;
     }
 
+    function initFilterButtons() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const loadMoreBtn = document.getElementById('load-more-btn');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active state
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Get selected category
+                currentCategory = this.getAttribute('data-category');
+                
+                // Filter data
+                if (currentCategory === 'all') {
+                    filteredData = allPortfolioData;
+                } else {
+                    filteredData = allPortfolioData.filter(item => item.category === currentCategory);
+                }
+                
+                // Reset display count and show items
+                currentlyDisplayed = 0;
+                displayItems();
+                
+                // Scroll to top of portfolio items
+                const portfolioPage = document.querySelector('.portfolio-page');
+                if (portfolioPage) {
+                    portfolioPage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // Load more button
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', function() {
+                displayItems();
+                
+                // Scroll to first newly loaded item
+                const newItemIndex = currentlyDisplayed - itemsPerPage;
+                const newItem = document.getElementById(`portfolio-item-${newItemIndex}`);
+                if (newItem) {
+                    newItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+        }
+    }
+
     function initPortfolioCarousels() {
         const carousels = document.querySelectorAll('.portfolio-image-carousel');
     
@@ -70,17 +152,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
             if (!track || slides.length === 0) return;
     
-            // ============================================================
-            // 🚫 If there is only one image → do not show arrows or animation
-            // ============================================================
+            // If there is only one image → do not show arrows or animation
             if (slides.length === 1) {
                 if (prevBtn) prevBtn.style.display = "none";
                 if (nextBtn) nextBtn.style.display = "none";
     
-                // Do not clone, do not move, do not auto-scroll
                 track.style.transform = "translateX(0)";
                 return;
             }
+            
             const firstClone = slides[0].cloneNode(true);
             const lastClone = slides[slides.length - 1].cloneNode(true);
     
@@ -125,9 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
     
-            // ============================================================
             // SMOOTH LOOP WITHOUT JUMPING
-            // ============================================================
             track.addEventListener("transitionend", () => {
                 if (allSlides[index].classList.contains("clone")) {
                     track.style.transition = "none";
@@ -143,9 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
     
-            // ============================================================
             // AUTO SCROLL
-            // ============================================================
             let autoScroll = setInterval(() => {
                 index++;
                 moveToIndex();
