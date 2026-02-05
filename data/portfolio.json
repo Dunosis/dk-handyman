@@ -291,5 +291,13 @@
     "images": [
       "images/portfolio/33/dk-01.jpg"
     ]
+ },
+ {
+   "name": "INSTALLATION",
+   "description": "Installation of mail box",
+   "category": "decks",
+    "images": [
+      "images/portfolio/34/dk-01.png"
+    ]
  }
 ]
