@@ -267,5 +267,12 @@
       "images/portfolio/15/dk-01.jpg",
       "images/portfolio/15/dk-02.jpg"
     ]
-  }
+ },
+ {
+   "name": "INSTALLATION OF HORSE FEEDER",
+   "description": "Horse Feeder",
+    "images": [
+      "images/portfolio/16/dk-01.jpg"
+    ]
+ }
 ]
