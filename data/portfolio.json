@@ -1,5 +1,70 @@
 [
   {
+    "name": "Bathroom Shower Repair",
+    "description": "Completed a bathroom shower repair and refreshed the shower area.",
+    "category": "bathroom",
+    "images": [
+      "images/portfolio/31/dk-01.jpeg",
+      "images/portfolio/31/dk-02.jpeg"
+    ]
+  },
+  {
+    "name": "Mailbox Installation",
+    "description": "Installed a new mailbox and secured it for long-term outdoor use.",
+    "category": "decks",
+    "images": [
+      "images/portfolio/32/dk-01.jpeg"
+    ]
+  },
+  {
+    "name": "Horse Feeder Installation",
+    "description": "Installed a durable horse feeder setup for convenient outdoor feeding.",
+    "category": "decks",
+    "images": [
+      "images/portfolio/33/dk-01.jpeg"
+    ]
+  },
+  {
+    "name": "Chimney Installation",
+    "description": "Installed a new chimney system with secure exterior finishing.",
+    "category": "chimney",
+    "images": [
+      "images/portfolio/34/dk-01.jpeg"
+    ]
+  },
+  {
+    "name": "Chimney Repair and Maintenance",
+    "description": "Completed chimney repair and routine maintenance for safe operation.",
+    "category": "chimney",
+    "images": [
+      "images/portfolio/35/dk-01.jpeg"
+    ]
+  },
+  {
+    "name": "Chimney Repair and Maintenance",
+    "description": "Completed chimney repair and routine maintenance for safe operation.",
+    "category": "chimney",
+    "images": [
+      "images/portfolio/36/dk-01.jpeg"
+    ]
+  },
+  {
+    "name": "House Painting Exterior and Interior",
+    "description": "Painted the full exterior of the house with a refreshed color finish.",
+    "category": "painting",
+    "images": [
+      "images/portfolio/37/dk-01.jpeg"
+    ]
+  },
+  {
+    "name": "House Painting Exterior",
+    "description": "Painted exterior walls and trim for a clean, updated look throughout the home.",
+    "category": "painting",
+    "images": [
+      "images/portfolio/38/dk-01.jpeg"
+    ]
+  },
+  {
     "name": "Bathroom Update",
     "description": "Updated bathroom with new tile, fixtures, and paint.",
     "category": "bathroom",
